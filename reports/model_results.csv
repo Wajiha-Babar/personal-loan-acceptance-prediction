@@ -1,0 +1,3 @@
+Model,Algorithm,Accuracy
+Personal Loan Acceptance Prediction,Logistic Regression,95.5
+Loan Approval Prediction,Decision Tree Classifier,91.05
