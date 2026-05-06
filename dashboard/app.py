@@ -150,7 +150,7 @@ try:
     personal_model, personal_columns, approval_model, approval_columns = load_models()
     personal_df, approval_df, results_df = load_data()
 except Exception:
-    st.error("Pehle model train karein: python src/train_model.py")
+    st.error("Please train the models first by running: python src/train_model.py")
     st.stop()
 
 
@@ -235,13 +235,13 @@ if page == "Home":
         <div class='lux-card'>
             <h3>Project Objective</h3>
             <p>
-            Is project ka objective banking customers ka data use kar ke predict karna hai
-            ke kaunsa customer personal loan offer accept kar sakta hai.
-            Is ke sath second dataset par loan approval prediction bhi perform ki gayi hai.
+            The objective of this project is to use banking customer data to predict
+            whether a customer is likely to accept a personal loan offer.
+            In addition, loan approval prediction is performed using a second dataset.
             </p>
             <p>
-            Project mein data cleaning, EDA, machine learning model training,
-            evaluation, business insights aur premium Streamlit dashboard included hai.
+            This project includes data cleaning, exploratory data analysis, machine learning model training,
+            model evaluation, business insights, and a premium Streamlit dashboard.
             </p>
         </div>
         """,
@@ -271,8 +271,8 @@ elif page == "Personal Loan Prediction":
     st.markdown(
         """
         <div class='lux-card'>
-            Customer ki information enter karein. Model predict karega ke customer
-            personal loan offer accept karega ya nahi.
+            Enter the customer information below. The model will predict whether the customer
+            is likely to accept the personal loan offer.
         </div>
         """,
         unsafe_allow_html=True
@@ -342,8 +342,8 @@ elif page == "Loan Approval Prediction":
     st.markdown(
         """
         <div class='lux-card'>
-            Applicant ki financial information enter karein.
-            Model predict karega ke loan approve hoga ya reject.
+            Enter the applicant's financial information below.
+            The model will predict whether the loan is likely to be approved or rejected.
         </div>
         """,
         unsafe_allow_html=True
@@ -471,10 +471,10 @@ elif page == "EDA & Insights":
             <div class='lux-card'>
             <h3>Business Insights</h3>
             <ul>
-                <li>High income customers personal loan accept karne ke zyada chances rakhte hain.</li>
-                <li>CD Account wale customers banking products mein zyada interested ho sakte hain.</li>
-                <li>Credit card average spending aur income important factors hain.</li>
-                <li>Education level customer loan acceptance behavior ko affect kar sakta hai.</li>
+                <li>High-income customers are more likely to accept personal loan offers.</li>
+                <li>Customers with a CD account may show stronger interest in banking products.</li>
+                <li>Average credit card spending and income are important prediction factors.</li>
+                <li>Education level can influence customer loan acceptance behavior.</li>
             </ul>
             </div>
             """,
@@ -522,10 +522,10 @@ elif page == "EDA & Insights":
             <div class='lux-card'>
             <h3>Business Insights</h3>
             <ul>
-                <li>High credit score wale applicants ke approval chances zyada hote hain.</li>
-                <li>Previous default hone par rejection ka risk zyada hota hai.</li>
-                <li>Loan amount agar income ke comparison mein zyada ho to approval chances kam ho sakte hain.</li>
-                <li>Interest rate aur credit history loan decision mein important role play karte hain.</li>
+                <li>Applicants with higher credit scores generally have better approval chances.</li>
+                <li>A previous loan default increases the risk of rejection.</li>
+                <li>A loan amount that is high compared with income may reduce approval chances.</li>
+                <li>Interest rate and credit history play an important role in loan decisions.</li>
             </ul>
             </div>
             """,
@@ -560,12 +560,13 @@ elif page == "Model Performance":
         <div class='lux-card'>
         <h3>Final Conclusion</h3>
         <p>
-        Personal Loan Acceptance model ne 95% se zyada accuracy achieve ki.
-        Loan Approval model ne bhi strong performance show ki.
+        The Personal Loan Acceptance model achieved more than 95% accuracy.
+        The Loan Approval model also demonstrated strong performance.
         </p>
         <p>
-        Business point of view se banks high-income, strong credit profile,
-        no previous default aur active banking customers ko better target kar sakte hain.
+        From a business perspective, banks can better target high-income customers,
+        applicants with strong credit profiles, customers with no previous defaults,
+        and users who are actively engaged with banking services.
         </p>
         </div>
         """,
